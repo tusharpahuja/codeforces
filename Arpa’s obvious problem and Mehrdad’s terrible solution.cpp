@@ -13,7 +13,7 @@ for(i=0;i<131072;i++){
 }
 for(i=0;i<n;i++){
     cin>>a;
-    c += temp[x^a];
+    c += temp[x^a]; //Find the exor
     temp[a]++;
 }
 cout<<c;
