@@ -1,3 +1,4 @@
+
 #include<iostream>
 #include<stdlib.h>
 #include<string.h>
@@ -34,9 +35,7 @@ if(kn==0){
     cout<<0<<" "<<0<<" "<<0<<" "<<0;
     exit(0);
 }
-//while((kr+kb+kg+ky+vr+vb+vg+vy)!=(l)){
-//
-//}
+
 for(i=0;i<l;i++){
     if(a[i]=='R'){
         j = i+4;

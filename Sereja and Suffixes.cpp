@@ -1,3 +1,4 @@
+
 #include<iostream>
 #include<stdlib.h>
 #include<string.h>
@@ -31,10 +32,5 @@ for(i=1;i<=m;i++){
 }
 return 0;
 }
-
-
-
-
-
 
 

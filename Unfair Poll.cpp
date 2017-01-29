@@ -54,3 +54,4 @@ for(i=1;i<=n;i++){
 cout<<ma<<" "<<mi<<" "<<s;
 return 0;
 }
+
