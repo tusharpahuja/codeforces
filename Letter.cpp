@@ -8,30 +8,36 @@
 using namespace std;
 
 int main(){
-string a,b;
-int l1,l2,i;
-getline(cin,a);
-getline(cin,b);
-l1 = strlen(a.c_str());
-l2 = strlen(b.c_str());
-int alp1[71],alp2[71];
-memset(alp1,0,sizeof(alp1));
-memset(alp2,0,sizeof(alp2));
-for(i=0;i<l1;i++){
-    if(a[i]!=' ') alp1[int(a[i])-64]++;
-}
-for(i=0;i<l2;i++){
-    if(b[i]!=' ') alp2[int(b[i])-64]++;
-}
-for(i=1;i<=70;i++){
-    if(alp2[i]>alp1[i]){
-        cout<<"NO";
-        exit(0);
+long long len,i,up=0,lo=0,ans;
+string a;
+cin>>a;
+len = strlen(a.c_str());
+long long upper[len+1],lower[len+1];
+upper[0] = 0;
+lower[0] = 0;
+for(i=0;i<len;i++){
+    upper[i+1] = upper[i];
+    lower[i+1] = lower[i];
+    if((int(a[i]))>=97){
+        lower[i+1]++;
+    }
+    else{
+        upper[i+1]++;
     }
 }
-cout<<"YES";
+ans = 1e9;
+for(i=0;i<=len;i++){
+    lo = lower[i];
+    up = upper[len]-upper[i];
+    ans = min(ans,lo+up);
+}
+cout<<ans;
 return 0;
 }
+
+
+
+
 
 
 
